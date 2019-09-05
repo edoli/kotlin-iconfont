@@ -1,5 +1,5 @@
 object MaterialIcon {
-    val 3dRotation = "\ue84d"
+    val a3dRotation = "\ue84d"
     val acUnit = "\ueb3b"
     val accessAlarm = "\ue190"
     val accessAlarms = "\ue191"

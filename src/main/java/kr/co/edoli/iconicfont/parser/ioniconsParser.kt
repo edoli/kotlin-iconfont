@@ -6,11 +6,10 @@ import com.steadystate.css.parser.SACParserCSS3
 import org.apache.commons.io.FileUtils
 import org.w3c.css.sac.InputSource
 import org.w3c.dom.css.CSSStyleRule
-
 import java.io.File
 import java.io.FileReader
 import java.io.IOException
-import java.util.ArrayList
+import java.util.*
 
 /**
  * Created by daniel on 16. 2. 29.

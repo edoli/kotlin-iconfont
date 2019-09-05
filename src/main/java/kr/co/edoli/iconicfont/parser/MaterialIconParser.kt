@@ -1,17 +1,16 @@
-package kr.co.edoli.iconicfont
+package kr.co.edoli.iconicfont.parser
 
+import kr.co.edoli.iconicfont.FontCode
+import kr.co.edoli.iconicfont.generateCodeFile
 import org.apache.commons.io.FileUtils
-
 import java.io.File
 import java.io.IOException
-import java.util.ArrayList
+import java.util.*
 
-/**
- * Created by daniel on 16. 2. 29.
- */
+// https://material.io/resources/icons/?style=baseline
 object MaterialIconParser {
 
-    fun parseMaterialIcon() {
+    fun parse() {
         val codePath = "fonts/material-design-icons/iconfont/codepoints"
 
         try {
@@ -24,7 +23,7 @@ object MaterialIconParser {
                 fontCodes.add(FontCode(splitted[0], splitted[1]))
             }
 
-            FileUtils.write(File("generated/MaterialIcon.java"), generateCodeFile("MaterialIcon", fontCodes, underscoreToCamel))
+            FileUtils.write(File("generated/MaterialIcon.kotlin"), generateCodeFile("MaterialIcon", fontCodes))
         } catch (e: IOException) {
             e.printStackTrace()
         }
