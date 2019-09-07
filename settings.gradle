@@ -1,2 +1,4 @@
-rootProject.name = 'iconicfont'
+include 'parser'
+include 'core'
+include 'iconfont'
 

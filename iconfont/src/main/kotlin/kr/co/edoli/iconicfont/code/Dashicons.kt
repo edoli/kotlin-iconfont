@@ -1,3 +1,5 @@
+package kr.co.edoli.iconicfont.code 
+
 object Dashicons {
     val dashiconsAdminAppearance = "\uf100"
     val dashiconsAdminCollapse = "\uf148"

@@ -1,3 +1,5 @@
+package kr.co.edoli.iconicfont.code 
+
 object ThemifyIcons {
     val tiWand = "\ue600"
     val tiVolume = "\ue601"

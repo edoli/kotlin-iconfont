@@ -26,19 +26,56 @@ compileTestKotlin {
     kotlinOptions.jvmTarget = "1.8"
 }
 
-repositories {
-    jcenter()
-    mavenLocal()
-    mavenCentral()
-    maven { url "https://oss.sonatype.org/content/repositories/snapshots/" }
-    maven { url "https://oss.sonatype.org/content/repositories/releases/" }
+
+allprojects {
+    apply plugin: "eclipse"
+    apply plugin: "idea"
+    apply plugin: "kotlin"
+
+    version = "1.0"
+
+    repositories {
+        jcenter()
+        mavenLocal()
+        mavenCentral()
+        maven { url "https://oss.sonatype.org/content/repositories/snapshots/" }
+        maven { url "https://oss.sonatype.org/content/repositories/releases/" }
+    }
+
 }
 
-dependencies {
-    implementation fileTree(dir: 'libs', include: ['*.jar'])
+project(":iconfont") {
+    apply plugin: "java"
 
-    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8:$kotlin_version"
-    implementation "commons-io:commons-io:2.4"
-    implementation "org.w3c.css:sac:1.3"
-    implementation "com.google.re2j:re2j:1.1"
+    dependencies {
+        implementation fileTree(dir: 'libs', include: ['*.jar'])
+        implementation project(":core")
+
+        implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8:$kotlin_version"
+    }
+}
+
+project(":parser") {
+    apply plugin: "java"
+
+    dependencies {
+        implementation fileTree(dir: 'libs', include: ['*.jar'])
+        implementation project(":core")
+
+        implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8:$kotlin_version"
+
+        implementation "commons-io:commons-io:2.6"
+        implementation "org.w3c.css:sac:1.3"
+        implementation "com.google.re2j:re2j:1.3"
+    }
+}
+
+project(":core") {
+    apply plugin: "java"
+
+    dependencies {
+        implementation fileTree(dir: 'libs', include: ['*.jar'])
+
+        implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8:$kotlin_version"
+    }
 }

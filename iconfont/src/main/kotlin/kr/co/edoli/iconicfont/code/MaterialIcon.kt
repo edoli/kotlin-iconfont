@@ -1,3 +1,5 @@
+package kr.co.edoli.iconicfont.code 
+
 object MaterialIcon {
     val a3dRotation = "\ue84d"
     val acUnit = "\ueb3b"

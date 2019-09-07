@@ -1,3 +1,5 @@
+package kr.co.edoli.iconicfont.code 
+
 object MetrizeIcons {
     val iconYen = "\ue000"
     val iconWorld = "\ue001"

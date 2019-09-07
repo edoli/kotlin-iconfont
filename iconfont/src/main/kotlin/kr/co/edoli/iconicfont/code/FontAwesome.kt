@@ -1,3 +1,5 @@
+package kr.co.edoli.iconicfont.code 
+
 object FontAwesome {
     val fa500px = "\uf26e"
     val faAccessibleIcon = "\uf368"

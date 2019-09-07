@@ -4,21 +4,16 @@ import com.google.re2j.Pattern
 import com.steadystate.css.parser.CSSOMParser
 import com.steadystate.css.parser.SACParserCSS3
 import kr.co.edoli.iconicfont.FontCode
-import kr.co.edoli.iconicfont.dashToCamel
-import kr.co.edoli.iconicfont.generateCodeFile
-import org.apache.commons.io.FileUtils
 import org.w3c.css.sac.InputSource
 import org.w3c.dom.css.CSSStyleRule
-import java.io.File
 import java.io.FileReader
 import java.io.IOException
 import java.util.*
 
 abstract class CssParser : BaseParser() {
-    abstract val name: String
     abstract val cssPath: String
 
-    override fun parse() {
+    override fun parse(): List<FontCode> {
         val sp = Pattern.compile("\\.(\\S+):before")
 
         try {
@@ -59,10 +54,10 @@ abstract class CssParser : BaseParser() {
                     }
                 }
             }
-
-            FileUtils.write(File("generated/$name.kotlin"), generateCodeFile(name, fontCodes))
+            return fontCodes
         } catch (e: IOException) {
             e.printStackTrace()
+            return listOf()
         }
 
     }

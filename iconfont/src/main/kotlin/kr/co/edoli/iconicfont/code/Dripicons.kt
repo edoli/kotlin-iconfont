@@ -1,3 +1,5 @@
+package kr.co.edoli.iconicfont.code 
+
 object Dripicons {
     val dripiconsAlarm = "\u0061"
     val dripiconsAlignCenter = "\u0062"

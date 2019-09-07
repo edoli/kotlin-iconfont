@@ -1,5 +1,6 @@
-package kr.co.edoli.iconicfont
+package kr.co.edoli.iconicfont.parser
 
+import kr.co.edoli.iconicfont.FontCode
 
 
 val dashToCamel = { cn: String ->
@@ -32,6 +33,8 @@ val underscoreToCamel = { cn: String ->
 
 fun generateCodeFile(name: String, fontCodes: List<FontCode>): String {
     val code = StringBuilder()
+
+    code.append("package kr.co.edoli.iconicfont.code \n\n")
 
     code.append("object $name {\n")
     for (fontCode in fontCodes) {

@@ -1,3 +1,5 @@
+package kr.co.edoli.iconicfont.code 
+
 object Ionicons {
     val ionIosAdd = "\uf102"
     val ionIosAddCircle = "\uf101"

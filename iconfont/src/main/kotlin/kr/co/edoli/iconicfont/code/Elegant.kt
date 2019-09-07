@@ -1,3 +1,5 @@
+package kr.co.edoli.iconicfont.code 
+
 object Elegant {
     val arrowUp = "\u0021"
     val arrowDown = "\u0022"
