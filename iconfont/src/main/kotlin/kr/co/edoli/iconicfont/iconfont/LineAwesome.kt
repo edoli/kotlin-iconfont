@@ -1,4 +1,4 @@
-package kr.co.edoli.iconicfont.code 
+package kr.co.edoli.iconicfont.iconfont 
 
 object LineAwesome {
     val la500px = "\uf100"

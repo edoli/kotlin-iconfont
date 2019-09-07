@@ -1,0 +1,36 @@
+plugins {
+    id "com.jfrog.bintray" version "1.8.4"
+    id "maven-publish"
+}
+
+bintray {
+    user = System.getenv('BINTRAY_USER')
+    key = System.getenv('BINTRAY_KEY')
+    publications = ['mavenPublication']
+
+    pkg {
+        version {
+            name = '1.0'
+            desc = 'Kotlin icon font'
+            released  = new Date()
+            vcsTag = '1.0.0'
+        }
+
+        repo = 'kotlin-iconfont'
+        name = 'iconfont'
+        userOrg = 'edoli'
+        licenses = ['Apache-2.0']
+        vcsUrl = 'https://github.com/edoli/kotlin-iconfont.git'
+    }
+}
+
+publishing {
+    publications {
+        mavenPublication(MavenPublication) {
+            from components.java
+            groupId 'kr.co.edoli.iconicfont'
+            artifactId 'iconfont'
+            version '1.0'
+        }
+    }
+}

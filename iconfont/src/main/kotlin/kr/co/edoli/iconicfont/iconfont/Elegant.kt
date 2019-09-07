@@ -1,4 +1,4 @@
-package kr.co.edoli.iconicfont.code 
+package kr.co.edoli.iconicfont.iconfont 
 
 object Elegant {
     val arrowUp = "\u0021"

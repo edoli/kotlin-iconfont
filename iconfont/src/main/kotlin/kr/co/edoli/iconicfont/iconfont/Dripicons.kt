@@ -1,4 +1,4 @@
-package kr.co.edoli.iconicfont.code 
+package kr.co.edoli.iconicfont.iconfont 
 
 object Dripicons {
     val dripiconsAlarm = "\u0061"

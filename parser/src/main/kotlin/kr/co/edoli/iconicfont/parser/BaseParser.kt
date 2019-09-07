@@ -11,7 +11,7 @@ abstract class BaseParser() {
     fun generate() {
         val fontCodes = parse()
         FileUtils.write(
-                File("iconfont/src/main/kotlin/kr/co/edoli/iconicfont/code/$name.kt"),
+                File("iconfont/src/main/kotlin/kr/co/edoli/iconicfont/iconfont/$name.kt"),
                 generateCodeFile(name, fontCodes),
                 "UTF-8")
     }

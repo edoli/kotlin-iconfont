@@ -34,13 +34,17 @@ val underscoreToCamel = { cn: String ->
 fun generateCodeFile(name: String, fontCodes: List<FontCode>): String {
     val code = StringBuilder()
 
-    code.append("package kr.co.edoli.iconicfont.code \n\n")
+    code.append("package kr.co.edoli.iconicfont.iconfont \n\n")
 
     code.append("object $name {\n")
     for (fontCode in fontCodes) {
         var codeName = dashToCamel(underscoreToCamel(fontCode.name))
         if (codeName[0].isDigit()) {
             codeName = "a$codeName"
+        }
+        if (codeName == "class") {
+            println("!!")
+            codeName = "${codeName}_"
         }
         val line = String.format("    val %s = \"\\u%s\"\n", codeName, fontCode.code)
         code.append(line)

@@ -1,4 +1,4 @@
-package kr.co.edoli.iconicfont.code 
+package kr.co.edoli.iconicfont.iconfont 
 
 object MaterialIcon {
     val a3dRotation = "\ue84d"
@@ -165,7 +165,7 @@ object MaterialIcon {
     val childCare = "\ueb41"
     val childFriendly = "\ueb42"
     val chromeReaderMode = "\ue86d"
-    val class = "\ue86e"
+    val class_ = "\ue86e"
     val clear = "\ue14c"
     val clearAll = "\ue0b8"
     val close = "\ue5cd"
